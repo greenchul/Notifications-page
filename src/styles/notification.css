@@ -1,7 +1,48 @@
 .notification-container {
-  background-color: hsl(211, 68%, 94%);
+  background-color: hsl(210, 60%, 98%);
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  border-radius: 10px;
 }
 
 .read {
   background-color: white;
+}
+
+.notification-name {
+  font-weight: 700;
+}
+
+.notification-text {
+  color: hsl(219, 12%, 42%);
+}
+
+.notification-summary {
+  color: hsl(219, 12%, 42%);
+  font-weight: 700;
+}
+
+.notification-writing {
+  /* display: flex;
+  flex-direction: column; */
+}
+
+.notification-time {
+  margin-top: 2px;
+  color: hsl(219, 14%, 63%);
+}
+
+.notification-p {
+  margin-bottom: 2px;
+}
+
+img {
+  height: 60%;
+}
+
+.notification-image-div {
+  display: flex;
+  align-items: center;
 }

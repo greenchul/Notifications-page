@@ -3,6 +3,7 @@ import React from "react";
 import { useStoreActions } from "../store/index";
 import { NotificationType } from "../store/index";
 import "../styles/notification.css";
+import { selectPhoto } from "../utils/selectPhoto";
 
 type NotificationProps = {
   notification: NotificationType;
@@ -24,11 +25,19 @@ const Notification = ({ notification }: NotificationProps) => {
         notification.beenRead ? "read" : ""
       }`}
     >
-      <p>
-        <span>{notification.name} </span>
-        <span>{notification.text} </span>
-        {notification.subject && <span>{notification.subject}</span>}
-      </p>
+      <div className="notification-image-div">
+        <img src={selectPhoto(notification.name)} />
+      </div>
+      <div className="notification-writing">
+        <p className="notification-p">
+          <span className="notification-name">{notification.name} </span>
+          <span className="notification-text">{notification.text} </span>
+          {notification.subject && (
+            <span className="notification-summary">{notification.subject}</span>
+          )}
+        </p>
+        <p className="notification-time">{notification.timeSince}</p>
+      </div>
     </div>
   );
 };
