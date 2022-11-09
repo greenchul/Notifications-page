@@ -1,0 +1,26 @@
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-container p {
+  margin-left: 20px;
+  font-weight: 800;
+  font-size: 25px;
+}
+
+.nav-container span {
+  background-color: hsl(219, 85%, 26%);
+  padding: 0px 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+.nav-container button {
+  margin-right: 20px;
+  background-color: white;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  border: none;
+  font-size: 15px;
+  color: hsl(219, 12%, 42%);
+}
